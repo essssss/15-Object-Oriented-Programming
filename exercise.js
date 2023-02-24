@@ -28,3 +28,20 @@ class Motorcycle extends Vehicle {
       return 'VROOOOM!';
    }
 }
+
+class Garage {
+   constructor(a) {
+      this.vehicles = [];
+      this.capacity = a;
+   }
+   add(newVehicle) {
+      if (!(newVehicle instanceof Vehicle)) {
+         return 'Only New Vehicles Allowed';
+      }
+      if (this.vehicles.length >= this.capacity) {
+         return 'We Are Full!';
+      }
+      this.vehicles.push(newVehicle);
+      return 'Added Your Vehicle';
+   }
+}
