@@ -11,3 +11,20 @@ class Vehicle {
       return `The vehicle is a ${this.make} ${this.model} from ${this.year}.`;
    }
 }
+
+class Car extends Vehicle {
+   constructor(a, b, c) {
+      super(a, b, c);
+      this.numWheels = 4;
+   }
+}
+
+class Motorcycle extends Vehicle {
+   constructor(a, b, c) {
+      super(a, b, c);
+      this.numWheels = 2;
+   }
+   revEngine() {
+      return 'VROOOOM!';
+   }
+}
